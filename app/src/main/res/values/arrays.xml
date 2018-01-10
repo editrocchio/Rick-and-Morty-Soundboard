@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="popups">
+        <item>Wow</item>
+        <item>Great</item>
+        <item>Keep clicking</item>
+        <item>Oh yeah</item>
+        <item>Okay</item>
+        <item>Yeah Baby</item>
+        <item>Woo</item>
+        <item>Uh huh</item>
+        <item>You click so good</item>
+        <item>Woah</item>
+        <item>I like how you click me there</item>
+        <item>Yeah</item>
+        <item>Keep going</item>
+        <item>Nice one</item>
+        <item>ooohhh eeeee</item>
+    </string-array>
+</resources>
