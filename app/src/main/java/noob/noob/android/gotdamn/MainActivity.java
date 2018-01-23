@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button playNoobNoobSound = (Button) this.findViewById(R.id.button);
+        Button playGotDamn = (Button) this.findViewById(R.id.button2);
 
         final MediaPlayer gd1 = MediaPlayer.create(this, R.raw.gotdamn1);
         final MediaPlayer gd2 = MediaPlayer.create(this, R.raw.gotdamn2);
@@ -33,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
         final MediaPlayer stuffToDo = MediaPlayer.create(this, R.raw.gotsufftodo);
         final MediaPlayer mission = MediaPlayer.create(this, R.raw.mission);
 
-        //Listener to play random sound clip when button is pressed, increase gotdamn count if
-        //"gotdamn" is played
+        /**
+         * Listener to play random sound clip when button is pressed, increase gotdamn count if
+         * "gotdamn" is played
+         */
         playNoobNoobSound.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,12 +67,26 @@ public class MainActivity extends AppCompatActivity {
                 } else if (i == 5) {
                     mission.start();
                 }
+            }
+        });
 
+        /**
+         * Play only enthusiastic "GotDamn!"
+         */
+        playGotDamn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView counter = (TextView) findViewById(R.id.textView2);
+                gd2.start();
+                count++;
+                counter.setText("GotDamn count: " + count);
             }
         });
     }
 
-    //Random String generator takes from values/arrays.xml
+    /**
+     * Random String generator takes from values/arrays.xml
+     */
     public String stringGenerator() {
 
         Resources res = getResources();
